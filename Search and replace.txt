@@ -1,0 +1,32 @@
+Search and replace
+
+- '/' for basic search type /abc [here it will search for abc string in file]
+- press 'n' for move to next match in search
+- Next, type ? to enable search mode again but backwards this time and type ab
+- press 'N' for move to backwards in search
+
+
+  Search entire word
+- Type /\<word\> to search entire word
+- Type /li then enter then press '*' to find entire word by itself and it will move forward, press '#' to move backwards
+- Type '\c' in last to ignore search by ignoring casesensitive ex: /li\c [it will search both capital and lower letter by ignore case sensitive] 
+- Type :set ignorecase or :set ic
+- Type to revert it back to case sensitive :set noignorecase or :set noic
+
+ find and convert 
+- :[range]s/{pattern}/{new_string}/[flags] [count]
+- :s/line/row/ 5 [it will convet 5 words from current pointer to next search 'line' and replaced with'row']
+- : s/line/row/g [it will replaced occurences in a line]
+-  :%s/line/row/g [it will replaced all available occureneces in file] means replaced everything in file which matched with 'line' word
+
+
+- :%s/this/that/gi to replace all occurrences of this case insensitively with that
+- :5,10s/line/LINE/g to replace all occurrences of line with LINE
+- '.' (dot character) indicates the current line and '$' the last line
+- :.,$s/this/those/i to replace all occurrences of this with those from the current line to the end of the file. i is added to ignore case in the search
+
+- :50 to go at line 50 and then type :.,+4s/this/that/i [it will repalce this after 50th line all first 5 occureneces and 'i' use for ignore case]
+
+- Type :20,30s/^/# / as ^ denotes the beginning of a line ********************[comment all lines between 20 to 30 ]
+
+- Type :20,30s/^# // or :20,30s/#//g [to uncomment the lines]
