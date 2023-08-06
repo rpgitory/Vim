@@ -1,0 +1,14 @@
+Vim Modes - 2
+
+Visual mode :- is an advanced mode in vim and can be used for navigation and manipulation of text selections.
+
+press 'v' to enter in visual mode
+
+Note :- For often comment/uncomment multiple lines in config file. you can perform this operation convenietly in visual mode.
+
+type shift + V to activate visual mode in block mode and notice that all text in the current line is selected.
+2j or use up down arrow key to select the first 3 lines.
+then type :s/^/# to replace first character with #. [when you are in visual mode so when you press ':' it will automatically shows you like `:'<,'>` but don't worry just type command so when you already pressed ':' no need to add again just write further command s/^/# so finally your command will look like this `:'<,'>s/^/#`]
+
+now let's sort everything 
+press shift + v, once you're in visual mode then select all text in available file so type 'G'. once you selected everything then type :sort ui [so in visual mode your command will look like `:<,'>sort ui]
