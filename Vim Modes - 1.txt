@@ -1,0 +1,51 @@
+Vim Modes - 1
+
+
+Normal :-  Default mode for navigation and manipulation of text and it can always be activated by pressing Esc.
+
+Insert :-  Used for inserting/manipulating the text by using all keyboards keys. Not any normal mode commands is activated in this mode.
+
+Visual :-  Used for navigation and manipulation of text selections. Allow the use of most Normal mode commands on selected text.
+
+Note :- In vim almost all operations commands are performed in normal mode.
+
+o - add a new line below and it will automatically goes to insert mode.
+O - add a new line above and it will automatically goes to insert mode.
+a - Append after cursor and switch to interset mode.
+A - Append at end of line and switch to insert mode.
+s - Delete the character cursor is currently on and automatically switch to insert mode.
+D - Delete the character cursor is currently on and it will not goes to insert mode.
+c - cut a word but after pressing 'c' if you click right arrow '>' it will cut current cursor character; same as for left arrow, if you click to up arrow then it will cut current line and also upper line too as well; same as for down arrow. 
+[[ or gg - go to starting of file.
+]] or G - go to end of file 
+
+
+(((same things happened with cut 'c')))
+dd - delete entire line where cursor is.
+d+gg - it will delete current cursor line and delete all lines which are above the cursor.
+d+[[ - it will delete all characters and lines which are above or before the cursor.
+d+G  - it will delete a current line as well all lines which are after the cursor or below the cursor.
+d+]] - it will delete all characters and lines which are below or after the cursor.
+
+d-<left-arrow> - delete current and left character 
+d-<right-arrow> - delete current and right character
+d-<top-arrow> - delete current and upper line
+d-<down-arrow> - delete current and bottom line
+d$ - delete from current position to end of line 
+d^ - delete from current position to first character of line or begining of line.
+
+d0 or dO - delete from current backward to begining of line.
+dw - delete current to end of current word.
+db - delete current to beginning of current word.
+
+Copy, Cut & Past
+yy - copy current line 
+p - past line
+:u0 - undo all the changes since the opening to reset 
+3yy - copy current line and next two lines
+3dd - delete current line and next two lines
+
+y$ - copy all from current to end of line
+y^ - copy all from current to starting of line
+yw - copy to the start of next word
+yiw - copy the current word
